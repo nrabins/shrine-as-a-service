@@ -1,8 +1,6 @@
-body {
-    background-image: url('images/helga/shrine.png');
+.shrine-container {
+    margin: 0 auto;
+    background-image: url('../images/helga/shrine.png');
     background-repeat: no-repeat;
-}
-
-.hi {
-    content: 'testingggggggggggg';
+    height: 500px;
 }
