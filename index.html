@@ -4,19 +4,16 @@
     <title>Shrine As a Service | For all of your creepy closet worship needs</title>
     <link href="styles/main.css" rel="stylesheet" type="text/css"/>
   </head>
-
-  <h1>Hello world</h1>
-
-  <div class="shrine-container">
+  <body>
     <label>
       Upload a photo 💩
-      <input type="file"/>
+      <input id="image_upload_button" type="file"/>
     </label>
 
-    <!-- TODO: make the dimensions adjustable by user -->
-    <img src="" height="100" width="auto" alt="shrine subject" id="shrine_subject"/>
-    <button id="test_button">Clickyclicky</button>
-  </div>
+    <div class="shrine-container">
+        <img id="uploaded_image" src="" height="100" width="auto" alt="shrine subject"/>
+    </div>
 
-  <script src="js/index.js"></script>
+    <script src="js/index.js"></script>
+  </body>
 </html>

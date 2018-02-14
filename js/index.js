@@ -1,11 +1,17 @@
-console.log('working');
+var uploadButton = document.querySelector("#image_upload_button");
+var uploadedImage = document.querySelector("#uploaded_image");
 
-var userImage = "https://cdn.shopify.com/s/files/1/0808/5563/products/prod-pizza-cheese-slice-lg.jpg?v=1503592252";
-var testButton = document.querySelector("#test_button");
-var shrineSubject = document.querySelector("#shrine_subject")
+function getUserImage() {
+      var file    = document.querySelector('input[type=file]').files[0];
+      var reader  = new FileReader();
+    
+      reader.addEventListener("load", function () {
+        uploadedImage.src = reader.result;
+      }, false);
+    
+      return reader.readAsDataURL(file);
+    }
 
-
-testButton.addEventListener("click", function(){
-    shrineSubject.setAttribute("src", userImage);
+uploadButton.addEventListener("change", function(){
+    uploadedImage.setAttribute("alt", getUserImage());
 })
-
