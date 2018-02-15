@@ -24,11 +24,11 @@ uploadButton.addEventListener("change", function(){
 var imageWidth = uploadedImage.clientWidth;
 
 document.querySelector("#increase_size").addEventListener("click", function(){
-    imageWidth += 5;
+    imageWidth += 10;
     uploadedImage.setAttribute("style", "width:" + imageWidth + "px; height: auto;");
 })
 
 document.querySelector("#decrease_size").addEventListener("click", function(){
-    imageWidth -= 5;
+    imageWidth -= 10;
     uploadedImage.setAttribute("style", "width:" + imageWidth + "px; height: auto;");
 })
