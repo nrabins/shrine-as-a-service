@@ -32,3 +32,12 @@ document.querySelector("#decrease_size").addEventListener("click", function(){
     imageWidth -= 10;
     uploadedImage.setAttribute("style", "width:" + imageWidth + "px; height: auto;");
 })
+
+// Rotate Image
+// ============================================================================
+var imageRotation = 0;
+
+document.querySelector("#rotate_image").addEventListener("click", function(){
+    imageRotation += 90;
+    uploadedImage.setAttribute("style", "transform:rotate(" + imageRotation + "deg)");
+})
