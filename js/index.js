@@ -41,3 +41,28 @@ document.querySelector("#rotate_image").addEventListener("click", function(){
     imageRotation += 90;
     uploadedImage.style.transform = "rotate(" + imageRotation + "deg)";
 })
+
+// Reposition Image
+// ============================================================================
+var imageYPosition = 0;
+var imageXPosition = 0;
+
+document.querySelector("#position_up").addEventListener("click", function(){
+    imageYPosition -= 10;
+    uploadedImage.style.top = imageYPosition + "px";
+})
+
+document.querySelector("#position_down").addEventListener("click", function(){
+    imageYPosition += 10;
+    uploadedImage.style.top = imageYPosition + "px";
+})
+
+document.querySelector("#position_left").addEventListener("click", function(){
+    imageXPosition -= 10;
+    uploadedImage.style.left = imageXPosition + "px";
+})
+
+document.querySelector("#position_right").addEventListener("click", function(){
+    imageXPosition += 10;
+    uploadedImage.style.left = imageXPosition + "px";
+})
